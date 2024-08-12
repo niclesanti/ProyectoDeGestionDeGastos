@@ -96,6 +96,11 @@ public class Login extends javax.swing.JFrame {
         jLabelDeseoRegestrarme.setForeground(new java.awt.Color(37, 150, 81));
         jLabelDeseoRegestrarme.setText("Deseo registrarme");
         jLabelDeseoRegestrarme.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabelDeseoRegestrarme.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelDeseoRegestrarmeMouseClicked(evt);
+            }
+        });
 
         jButtonEntrar.setBackground(new java.awt.Color(37, 150, 81));
         jButtonEntrar.setForeground(new java.awt.Color(255, 255, 255));
@@ -206,6 +211,14 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jButtonCerrarActionPerformed
+
+    private void jLabelDeseoRegestrarmeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelDeseoRegestrarmeMouseClicked
+        // TODO add your handling code here:
+        RegistroUsuario registro = new RegistroUsuario();
+        registro.setVisible(true);
+        registro.setLocationRelativeTo(null);
+        dispose();
+    }//GEN-LAST:event_jLabelDeseoRegestrarmeMouseClicked
 
     /**
      * @param args the command line arguments

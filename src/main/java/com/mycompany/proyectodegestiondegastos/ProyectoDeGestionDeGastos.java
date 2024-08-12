@@ -15,7 +15,7 @@ import com.mycompany.ui.*;
 public class ProyectoDeGestionDeGastos {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        //System.out.println("Hello World!");
         
         Login login = new Login();
         login.setVisible(true);
