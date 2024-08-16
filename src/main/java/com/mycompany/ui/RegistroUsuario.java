@@ -4,6 +4,8 @@
  */
 package com.mycompany.ui;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author nicle
@@ -15,6 +17,7 @@ public class RegistroUsuario extends javax.swing.JFrame {
      */
     public RegistroUsuario() {
         initComponents();
+        this.setIconImage(new ImageIcon(getClass().getResource("/com/mycompany/images/logoFinanceFlow.png")).getImage());
     }
 
     /**
@@ -47,8 +50,8 @@ public class RegistroUsuario extends javax.swing.JFrame {
         jLabelImagen = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("FinanceFlow Registrarme");
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
 
         jPanelBG.setBackground(new java.awt.Color(255, 255, 255));
@@ -61,13 +64,13 @@ public class RegistroUsuario extends javax.swing.JFrame {
 
         jTextFieldClave.setBorder(null);
 
-        jSeparator1.setBackground(new java.awt.Color(37, 150, 81));
-        jSeparator1.setForeground(new java.awt.Color(37, 150, 81));
+        jSeparator1.setBackground(new java.awt.Color(52, 84, 61));
+        jSeparator1.setForeground(new java.awt.Color(52, 84, 61));
 
         jLabelClave.setText("CLAVE");
 
-        jSeparator3.setBackground(new java.awt.Color(37, 150, 81));
-        jSeparator3.setForeground(new java.awt.Color(37, 150, 81));
+        jSeparator3.setBackground(new java.awt.Color(52, 84, 61));
+        jSeparator3.setForeground(new java.awt.Color(52, 84, 61));
 
         jTextFieldUsuario.setBorder(null);
 
@@ -75,15 +78,15 @@ public class RegistroUsuario extends javax.swing.JFrame {
 
         jTextFieldConfirmarClave.setBorder(null);
 
-        jSeparator4.setBackground(new java.awt.Color(37, 150, 81));
-        jSeparator4.setForeground(new java.awt.Color(37, 150, 81));
+        jSeparator4.setBackground(new java.awt.Color(52, 84, 61));
+        jSeparator4.setForeground(new java.awt.Color(52, 84, 61));
 
         jLabelEmail.setText("EMAIL");
 
         jTextFieldEmail.setBorder(null);
 
-        jSeparator5.setBackground(new java.awt.Color(37, 150, 81));
-        jSeparator5.setForeground(new java.awt.Color(37, 150, 81));
+        jSeparator5.setBackground(new java.awt.Color(52, 84, 61));
+        jSeparator5.setForeground(new java.awt.Color(52, 84, 61));
 
         jButtonCerrar.setBackground(new java.awt.Color(255, 255, 255));
         jButtonCerrar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -97,7 +100,7 @@ public class RegistroUsuario extends javax.swing.JFrame {
             }
         });
 
-        jButtonEntrar.setBackground(new java.awt.Color(37, 150, 81));
+        jButtonEntrar.setBackground(new java.awt.Color(52, 84, 61));
         jButtonEntrar.setForeground(new java.awt.Color(255, 255, 255));
         jButtonEntrar.setText("REGISTRARME");
         jButtonEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -107,6 +110,7 @@ public class RegistroUsuario extends javax.swing.JFrame {
             }
         });
 
+        jLabelBack.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/images/back.png"))); // NOI18N
         jLabelBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelBack.setPreferredSize(new java.awt.Dimension(40, 15));
@@ -238,40 +242,6 @@ public class RegistroUsuario extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jLabelBackMouseClicked
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RegistroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RegistroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RegistroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RegistroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new RegistroUsuario().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCerrar;

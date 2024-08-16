@@ -4,6 +4,8 @@
  */
 package com.mycompany.ui;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author nicle
@@ -15,6 +17,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        this.setIconImage(new ImageIcon(getClass().getResource("/com/mycompany/images/logoFinanceFlow.png")).getImage());
     }
 
     /**
@@ -43,6 +46,7 @@ public class Login extends javax.swing.JFrame {
         jButtonCerrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("FinanceFlow Iniciar sesion");
         setUndecorated(true);
         setResizable(false);
 
@@ -80,20 +84,20 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jSeparator1.setBackground(new java.awt.Color(37, 150, 81));
-        jSeparator1.setForeground(new java.awt.Color(37, 150, 81));
+        jSeparator1.setBackground(new java.awt.Color(52, 84, 61));
+        jSeparator1.setForeground(new java.awt.Color(52, 84, 61));
 
-        jSeparator3.setBackground(new java.awt.Color(37, 150, 81));
-        jSeparator3.setForeground(new java.awt.Color(37, 150, 81));
+        jSeparator3.setBackground(new java.awt.Color(52, 84, 61));
+        jSeparator3.setForeground(new java.awt.Color(52, 84, 61));
 
-        jLabelOlvidadoClave.setBackground(new java.awt.Color(37, 150, 81));
-        jLabelOlvidadoClave.setForeground(new java.awt.Color(37, 150, 81));
+        jLabelOlvidadoClave.setBackground(new java.awt.Color(52, 84, 61));
+        jLabelOlvidadoClave.setForeground(new java.awt.Color(52, 84, 61));
         jLabelOlvidadoClave.setText("He olvidado mi clave");
         jLabelOlvidadoClave.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelOlvidadoClave.setEnabled(false);
 
-        jLabelDeseoRegestrarme.setBackground(new java.awt.Color(37, 150, 81));
-        jLabelDeseoRegestrarme.setForeground(new java.awt.Color(37, 150, 81));
+        jLabelDeseoRegestrarme.setBackground(new java.awt.Color(52, 84, 61));
+        jLabelDeseoRegestrarme.setForeground(new java.awt.Color(52, 84, 61));
         jLabelDeseoRegestrarme.setText("Deseo registrarme");
         jLabelDeseoRegestrarme.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelDeseoRegestrarme.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -102,7 +106,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jButtonEntrar.setBackground(new java.awt.Color(37, 150, 81));
+        jButtonEntrar.setBackground(new java.awt.Color(52, 84, 61));
         jButtonEntrar.setForeground(new java.awt.Color(255, 255, 255));
         jButtonEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonEntrar.setLabel("ENTRAR");
@@ -205,6 +209,10 @@ public class Login extends javax.swing.JFrame {
 
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
         // TODO add your handling code here:
+        dispose();
+        PantallaPrincipal principal = new PantallaPrincipal();
+        principal.setVisible(true);
+        principal.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButtonEntrarActionPerformed
 
     private void jButtonCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarActionPerformed
@@ -220,40 +228,6 @@ public class Login extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jLabelDeseoRegestrarmeMouseClicked
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Login().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCerrar;
