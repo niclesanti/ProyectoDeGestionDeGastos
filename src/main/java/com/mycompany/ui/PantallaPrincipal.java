@@ -4,6 +4,8 @@
  */
 package com.mycompany.ui;
 
+import javax.swing.ImageIcon;
+
 
 /**
  *
@@ -16,6 +18,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
      */
     public PantallaPrincipal() {
         initComponents();
+        this.setIconImage(new ImageIcon(getClass().getResource("/com/mycompany/images/logoFinanceFlow.png")).getImage());
     }
 
     /**
