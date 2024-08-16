@@ -20,13 +20,7 @@ public class ProyectoDeGestionDeGastos {
         Login login = new Login();
         login.setVisible(true);
         login.setLocationRelativeTo(null);
-        
-        PantallaPrincipal principal = new PantallaPrincipal();
-        principal.setVisible(true);
-        principal.setLocationRelativeTo(null);
-        
-        
-        
+
         
     }
 }
