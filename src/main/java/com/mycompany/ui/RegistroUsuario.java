@@ -17,7 +17,7 @@ public class RegistroUsuario extends javax.swing.JFrame {
      */
     public RegistroUsuario() {
         initComponents();
-        this.setIconImage(new ImageIcon(getClass().getResource("/com/mycompany/images/logoFinanceFlow.png")).getImage());
+        this.setIconImage(new ImageIcon(getClass().getResource("/com/mycompany/images/miBilletera.png")).getImage());
     }
 
     /**
@@ -50,7 +50,7 @@ public class RegistroUsuario extends javax.swing.JFrame {
         jLabelImagen = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("FinanceFlow Registrarme");
+        setTitle("Mi Billetera - Registrarme");
         setUndecorated(true);
         setResizable(false);
 
