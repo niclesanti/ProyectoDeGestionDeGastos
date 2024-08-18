@@ -811,6 +811,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jLabelTransactionsImagen.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTransactionsImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/images/transactions.png"))); // NOI18N
         jLabelTransactionsImagen.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabelTransactionsImagen.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelTransactionsImagenMouseClicked(evt);
+            }
+        });
         jPanel7.add(jLabelTransactionsImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 60, 60));
 
         jLabelSubeFuncionImagen.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -939,6 +944,13 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         login.setVisible(true);
         login.setLocationRelativeTo(null);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jLabelTransactionsImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTransactionsImagenMouseClicked
+        // TODO add your handling code here:
+        PantallaTransacciones transaccionesPantalla = new PantallaTransacciones();
+        transaccionesPantalla.setVisible(true);
+        transaccionesPantalla.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jLabelTransactionsImagenMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
