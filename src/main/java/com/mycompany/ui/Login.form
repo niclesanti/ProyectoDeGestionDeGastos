@@ -7,6 +7,7 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="FinanceFlow Iniciar sesion"/>
     <Property name="undecorated" type="boolean" value="true"/>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
@@ -188,30 +189,30 @@
         <Component class="javax.swing.JSeparator" name="jSeparator1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="51" green="96" red="25" type="rgb"/>
+              <Color blue="3d" green="54" red="34" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="51" green="96" red="25" type="rgb"/>
+              <Color blue="3d" green="54" red="34" type="rgb"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator3">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="51" green="96" red="25" type="rgb"/>
+              <Color blue="3d" green="54" red="34" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="51" green="96" red="25" type="rgb"/>
+              <Color blue="3d" green="54" red="34" type="rgb"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabelOlvidadoClave">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="51" green="96" red="25" type="rgb"/>
+              <Color blue="3d" green="54" red="34" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="51" green="96" red="25" type="rgb"/>
+              <Color blue="3d" green="54" red="34" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="He olvidado mi clave"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -223,10 +224,10 @@
         <Component class="javax.swing.JLabel" name="jLabelDeseoRegestrarme">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="51" green="96" red="25" type="rgb"/>
+              <Color blue="3d" green="54" red="34" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="51" green="96" red="25" type="rgb"/>
+              <Color blue="3d" green="54" red="34" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Deseo registrarme"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
@@ -240,7 +241,7 @@
         <Component class="javax.swing.JButton" name="jButtonEntrar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="51" green="96" red="25" type="rgb"/>
+              <Color blue="3d" green="54" red="34" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
