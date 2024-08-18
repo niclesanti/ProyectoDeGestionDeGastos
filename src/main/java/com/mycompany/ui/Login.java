@@ -17,7 +17,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
-        this.setIconImage(new ImageIcon(getClass().getResource("/com/mycompany/images/logoFinanceFlow.png")).getImage());
+        this.setIconImage(new ImageIcon(getClass().getResource("/com/mycompany/images/miBilletera.png")).getImage());
     }
 
     /**
@@ -46,7 +46,7 @@ public class Login extends javax.swing.JFrame {
         jButtonCerrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("FinanceFlow Iniciar sesion");
+        setTitle("Mi Billetera - Iniciar sesion");
         setUndecorated(true);
         setResizable(false);
 

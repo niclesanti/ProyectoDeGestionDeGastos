@@ -18,7 +18,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
      */
     public PantallaPrincipal() {
         initComponents();
-        this.setIconImage(new ImageIcon(getClass().getResource("/com/mycompany/images/logoFinanceFlow.png")).getImage());
+        this.setIconImage(new ImageIcon(getClass().getResource("/com/mycompany/images/miBilletera.png")).getImage());
     }
 
     /**
@@ -133,11 +133,10 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("FinanceFlow");
+        setTitle("Mi Billetera");
         setBackground(new java.awt.Color(229, 238, 230));
         setIconImages(null);
         setMinimumSize(new java.awt.Dimension(1366, 720));
-        setPreferredSize(new java.awt.Dimension(1366, 720));
 
         jPanelBG.setBackground(new java.awt.Color(255, 255, 255));
         jPanelBG.setForeground(new java.awt.Color(255, 255, 255));
@@ -632,18 +631,22 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jLabel52.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel52.setForeground(new java.awt.Color(255, 255, 255));
         jLabel52.setText("TIPO AHORROS");
+        jLabel52.setEnabled(false);
 
         jLabel53.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel53.setForeground(new java.awt.Color(255, 255, 255));
         jLabel53.setText("CANTIDAD EN USD");
+        jLabel53.setEnabled(false);
 
         jLabel54.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel54.setForeground(new java.awt.Color(255, 255, 255));
         jLabel54.setText("CANTIDAD");
+        jLabel54.setEnabled(false);
 
         jLabel55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel55.setForeground(new java.awt.Color(255, 255, 255));
         jLabel55.setText("CANTIDAD EN $");
+        jLabel55.setEnabled(false);
 
         javax.swing.GroupLayout jPanelTitulosAhorrosLayout = new javax.swing.GroupLayout(jPanelTitulosAhorros);
         jPanelTitulosAhorros.setLayout(jPanelTitulosAhorrosLayout);
@@ -672,12 +675,14 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         jLabelAhorros.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabelAhorros.setText("AHORROS");
+        jLabelAhorros.setEnabled(false);
         jPanelAhorros.add(jLabelAhorros, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jScrollPaneAhorros.setBackground(new java.awt.Color(239, 239, 239));
         jScrollPaneAhorros.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jScrollPaneAhorros.setForeground(new java.awt.Color(52, 84, 61));
         jScrollPaneAhorros.setViewportBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jScrollPaneAhorros.setEnabled(false);
 
         jTableAhorros.setBackground(new java.awt.Color(234, 242, 235));
         jTableAhorros.setModel(new javax.swing.table.DefaultTableModel(
@@ -745,6 +750,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        jTableAhorros.setEnabled(false);
         jTableAhorros.setSelectionForeground(new java.awt.Color(164, 235, 180));
         jScrollPaneAhorros.setViewportView(jTableAhorros);
 
@@ -752,22 +758,27 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         jLabelCantDolaresAhorros.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabelCantDolaresAhorros.setText("0");
+        jLabelCantDolaresAhorros.setEnabled(false);
         jPanelAhorros.add(jLabelCantDolaresAhorros, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 260, -1));
 
         jLabelSignoDolarAhorros.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabelSignoDolarAhorros.setText("USD");
+        jLabelSignoDolarAhorros.setEnabled(false);
         jPanelAhorros.add(jLabelSignoDolarAhorros, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
 
         jLabelSignoPesosAhorros.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabelSignoPesosAhorros.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelSignoPesosAhorros.setText("$");
+        jLabelSignoPesosAhorros.setEnabled(false);
         jPanelAhorros.add(jLabelSignoPesosAhorros, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 20, -1));
 
         jLabelCantPesosAhorros.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabelCantPesosAhorros.setText("0");
+        jLabelCantPesosAhorros.setEnabled(false);
         jPanelAhorros.add(jLabelCantPesosAhorros, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 260, -1));
 
         jLabelTotalPesosEqDolares.setText("Total en Pesos y equivalente en Dolares");
+        jLabelTotalPesosEqDolares.setEnabled(false);
         jPanelAhorros.add(jLabelTotalPesosEqDolares, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
         jLabelChartImagenAhorros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/images/chart.png"))); // NOI18N
