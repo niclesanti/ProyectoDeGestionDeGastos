@@ -821,16 +821,31 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jLabelSubeFuncionImagen.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelSubeFuncionImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/images/sube.png"))); // NOI18N
         jLabelSubeFuncionImagen.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabelSubeFuncionImagen.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelSubeFuncionImagenMouseClicked(evt);
+            }
+        });
         jPanel7.add(jLabelSubeFuncionImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 60, 60));
 
         jLabelBankImagen.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelBankImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/images/bank.png"))); // NOI18N
         jLabelBankImagen.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabelBankImagen.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelBankImagenMouseClicked(evt);
+            }
+        });
         jPanel7.add(jLabelBankImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, 60, 60));
 
         jLabelCategoriesImagen.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelCategoriesImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/images/categories.png"))); // NOI18N
         jLabelCategoriesImagen.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabelCategoriesImagen.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelCategoriesImagenMouseClicked(evt);
+            }
+        });
         jPanel7.add(jLabelCategoriesImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 40, 70, 60));
 
         jLabelSavingsImagen.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -951,6 +966,27 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         transaccionesPantalla.setVisible(true);
         transaccionesPantalla.setLocationRelativeTo(null);
     }//GEN-LAST:event_jLabelTransactionsImagenMouseClicked
+
+    private void jLabelSubeFuncionImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSubeFuncionImagenMouseClicked
+        // TODO add your handling code here:
+        PantallaSube subePantalla = new PantallaSube();
+        subePantalla.setVisible(true);
+        subePantalla.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jLabelSubeFuncionImagenMouseClicked
+
+    private void jLabelCategoriesImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelCategoriesImagenMouseClicked
+        // TODO add your handling code here:
+        PantallaCategorias categoriasPantalla = new PantallaCategorias();
+        categoriasPantalla.setVisible(true);
+        categoriasPantalla.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jLabelCategoriesImagenMouseClicked
+
+    private void jLabelBankImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBankImagenMouseClicked
+        // TODO add your handling code here:
+        PantallaCuentas cuentasPantalla = new PantallaCuentas();
+        cuentasPantalla.setVisible(true);
+        cuentasPantalla.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jLabelBankImagenMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
