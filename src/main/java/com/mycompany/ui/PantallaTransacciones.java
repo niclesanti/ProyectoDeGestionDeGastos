@@ -133,6 +133,10 @@ public class PantallaTransacciones extends javax.swing.JFrame {
 
     private void jButtonNuevaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuevaActionPerformed
         // TODO add your handling code here:
+        AltaTransacciones altaTransaccion = new AltaTransacciones();
+        altaTransaccion.setVisible(true);
+        altaTransaccion.setLocationRelativeTo(null);
+        dispose();
     }//GEN-LAST:event_jButtonNuevaActionPerformed
 
     private void jButtonRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemoverActionPerformed
