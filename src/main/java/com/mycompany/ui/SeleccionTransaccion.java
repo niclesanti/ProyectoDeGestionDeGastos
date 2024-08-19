@@ -10,12 +10,12 @@ import javax.swing.ImageIcon;
  *
  * @author nicle
  */
-public class RemoverTransacciones extends javax.swing.JFrame {
+public class SeleccionTransaccion extends javax.swing.JFrame {
 
     /**
-     * Creates new form RemoverTransacciones
+     * Creates new form SeleccionTransaccion
      */
-    public RemoverTransacciones() {
+    public SeleccionTransaccion() {
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("/com/mycompany/images/miBilletera.png")).getImage());
     }
@@ -44,19 +44,16 @@ public class RemoverTransacciones extends javax.swing.JFrame {
         jLabelCuentaValor = new javax.swing.JLabel();
         jLabelMoneda = new javax.swing.JLabel();
         jLabelMonedaValor = new javax.swing.JLabel();
-        jButtonNuevaBuscar = new javax.swing.JButton();
-        jButtonNuevaRemover = new javax.swing.JButton();
         jLabelMonto = new javax.swing.JLabel();
         jLabelMontoValor = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Mi Billetera - Remover transaccion");
+        setTitle("Mi Billetera - Transaccion");
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(500, 480));
         setResizable(false);
 
         jPanelBG.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelBG.setPreferredSize(new java.awt.Dimension(500, 480));
+        jPanelBG.setPreferredSize(new java.awt.Dimension(500, 500));
         jPanelBG.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelBack.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -71,7 +68,7 @@ public class RemoverTransacciones extends javax.swing.JFrame {
         jPanelBG.add(jLabelBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, 30, 20));
 
         jLabelNuevaTransaccion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabelNuevaTransaccion.setText("REMOVER TRANSACCIÓN");
+        jLabelNuevaTransaccion.setText("TRANSACCIÓN SELECCIONADA");
         jPanelBG.add(jLabelNuevaTransaccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
 
         jLabelTipo.setText("TIPO");
@@ -110,28 +107,6 @@ public class RemoverTransacciones extends javax.swing.JFrame {
         jLabelMonedaValor.setText("XXX");
         jPanelBG.add(jLabelMonedaValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
 
-        jButtonNuevaBuscar.setBackground(new java.awt.Color(52, 84, 61));
-        jButtonNuevaBuscar.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonNuevaBuscar.setText("BUSCAR");
-        jButtonNuevaBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButtonNuevaBuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonNuevaBuscarActionPerformed(evt);
-            }
-        });
-        jPanelBG.add(jButtonNuevaBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 110, 30));
-
-        jButtonNuevaRemover.setBackground(new java.awt.Color(52, 84, 61));
-        jButtonNuevaRemover.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonNuevaRemover.setText("REMOVER");
-        jButtonNuevaRemover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButtonNuevaRemover.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonNuevaRemoverActionPerformed(evt);
-            }
-        });
-        jPanelBG.add(jButtonNuevaRemover, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 440, 110, 30));
-
         jLabelMonto.setText("MONTO");
         jPanelBG.add(jLabelMonto, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, -1, -1));
 
@@ -148,7 +123,7 @@ public class RemoverTransacciones extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelBG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelBG, javax.swing.GroupLayout.DEFAULT_SIZE, 467, Short.MAX_VALUE)
         );
 
         pack();
@@ -156,19 +131,8 @@ public class RemoverTransacciones extends javax.swing.JFrame {
 
     private void jLabelBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackMouseClicked
         // TODO add your handling code here:
-        PantallaTransacciones transaccionesPantalla = new PantallaTransacciones();
-        transaccionesPantalla.setVisible(true);
-        transaccionesPantalla.setLocationRelativeTo(null);
         dispose();
     }//GEN-LAST:event_jLabelBackMouseClicked
-
-    private void jButtonNuevaBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuevaBuscarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonNuevaBuscarActionPerformed
-
-    private void jButtonNuevaRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuevaRemoverActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonNuevaRemoverActionPerformed
 
     /**
      * @param args the command line arguments
@@ -187,27 +151,25 @@ public class RemoverTransacciones extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RemoverTransacciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SeleccionTransaccion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RemoverTransacciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SeleccionTransaccion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RemoverTransacciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SeleccionTransaccion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RemoverTransacciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SeleccionTransaccion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RemoverTransacciones().setVisible(true);
+                new SeleccionTransaccion().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonNuevaBuscar;
-    private javax.swing.JButton jButtonNuevaRemover;
     private javax.swing.JLabel jLabelBack;
     private javax.swing.JLabel jLabelCategoria;
     private javax.swing.JLabel jLabelCategoriaValor;
