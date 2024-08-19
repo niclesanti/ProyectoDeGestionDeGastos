@@ -141,6 +141,10 @@ public class PantallaTransacciones extends javax.swing.JFrame {
 
     private void jButtonRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemoverActionPerformed
         // TODO add your handling code here:
+        RemoverTransacciones removerTransaccion = new RemoverTransacciones();
+        removerTransaccion.setVisible(true);
+        removerTransaccion.setLocationRelativeTo(null);
+        dispose();
     }//GEN-LAST:event_jButtonRemoverActionPerformed
 
 
