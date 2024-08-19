@@ -129,6 +129,10 @@ public class PantallaTransacciones extends javax.swing.JFrame {
 
     private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarActionPerformed
         // TODO add your handling code here:
+        BuscarTransacciones buscarTransaccion = new BuscarTransacciones();
+        buscarTransaccion.setVisible(true);
+        buscarTransaccion.setLocationRelativeTo(null);
+        dispose();
     }//GEN-LAST:event_jButtonBuscarActionPerformed
 
     private void jButtonNuevaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuevaActionPerformed
