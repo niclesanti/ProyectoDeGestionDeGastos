@@ -226,6 +226,9 @@ public class AltaTransacciones extends javax.swing.JFrame {
 
     private void jButtonNuevaDescripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuevaDescripcionActionPerformed
         // TODO add your handling code here:
+        AltaDescripcion nuevaDescripcion = new AltaDescripcion();
+        nuevaDescripcion.setVisible(true);
+        nuevaDescripcion.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButtonNuevaDescripcionActionPerformed
 
     private void jButtonNuevaMonedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuevaMonedaActionPerformed
