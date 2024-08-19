@@ -569,6 +569,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         jLabelSearchImagenTrans.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/images/search.png"))); // NOI18N
         jLabelSearchImagenTrans.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabelSearchImagenTrans.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelSearchImagenTransMouseClicked(evt);
+            }
+        });
         jPanelTransacciones.add(jLabelSearchImagenTrans, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 43, -1, -1));
 
         jLabelSortImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/images/sort.png"))); // NOI18N
@@ -987,6 +992,13 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         cuentasPantalla.setVisible(true);
         cuentasPantalla.setLocationRelativeTo(null);
     }//GEN-LAST:event_jLabelBankImagenMouseClicked
+
+    private void jLabelSearchImagenTransMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSearchImagenTransMouseClicked
+        // TODO add your handling code here:
+        BuscarTransacciones buscarTransaccion = new BuscarTransacciones();
+        buscarTransaccion.setVisible(true);
+        buscarTransaccion.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jLabelSearchImagenTransMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -334,7 +334,9 @@ public class BuscarTransacciones extends javax.swing.JFrame {
 
     private void jButtonVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVerActionPerformed
         // TODO add your handling code here:
-        dispose();
+        SeleccionTransaccion seleccionTransaccion = new SeleccionTransaccion();
+        seleccionTransaccion.setVisible(true);
+        seleccionTransaccion.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButtonVerActionPerformed
 
     private void jButtonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarActionPerformed
