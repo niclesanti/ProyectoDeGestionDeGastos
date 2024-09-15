@@ -53,7 +53,6 @@ public class AltaTransacciones extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Mi Billetera - Nueva transaccion");
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(400, 600));
         setResizable(false);
 
         jPanelBG.setBackground(new java.awt.Color(255, 255, 255));
