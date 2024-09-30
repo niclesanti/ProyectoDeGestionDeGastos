@@ -34,7 +34,6 @@ public class PantallaCategorias extends javax.swing.JFrame {
         jLabelImagenMenuTransacciones = new javax.swing.JLabel();
         jLabelBack = new javax.swing.JLabel();
         jLabelMenuCategorias = new javax.swing.JLabel();
-        jButtonRemover = new javax.swing.JButton();
         jButtonVer = new javax.swing.JButton();
         jComboBoxCategorias = new javax.swing.JComboBox<>();
         jButtonNueva = new javax.swing.JButton();
@@ -42,7 +41,6 @@ public class PantallaCategorias extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Mi Billetera - Categorias");
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
 
         jPanelBG.setBackground(new java.awt.Color(255, 255, 255));
@@ -70,17 +68,6 @@ public class PantallaCategorias extends javax.swing.JFrame {
         jLabelMenuCategorias.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabelMenuCategorias.setText("CATEGORÍAS");
         jPanelBG.add(jLabelMenuCategorias, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
-
-        jButtonRemover.setBackground(new java.awt.Color(52, 84, 61));
-        jButtonRemover.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonRemover.setText("REMOVER");
-        jButtonRemover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButtonRemover.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRemoverActionPerformed(evt);
-            }
-        });
-        jPanelBG.add(jButtonRemover, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 230, 30));
 
         jButtonVer.setBackground(new java.awt.Color(52, 84, 61));
         jButtonVer.setForeground(new java.awt.Color(255, 255, 255));
@@ -138,56 +125,21 @@ public class PantallaCategorias extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jLabelBackMouseClicked
 
-    private void jButtonRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemoverActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonRemoverActionPerformed
-
     private void jButtonVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVerActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButtonVerActionPerformed
 
     private void jButtonNuevaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuevaActionPerformed
-        // TODO add your handling code here:
+        AltaCategoria nuevaCateoria = new AltaCategoria();
+        nuevaCateoria.setVisible(true);
+        nuevaCateoria.setLocationRelativeTo(null);
+        dispose();
     }//GEN-LAST:event_jButtonNuevaActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PantallaCategorias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PantallaCategorias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PantallaCategorias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PantallaCategorias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new PantallaCategorias().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonNueva;
-    private javax.swing.JButton jButtonRemover;
     private javax.swing.JButton jButtonVer;
     private javax.swing.JComboBox<String> jComboBoxCategorias;
     private javax.swing.JLabel jLabelBack;
