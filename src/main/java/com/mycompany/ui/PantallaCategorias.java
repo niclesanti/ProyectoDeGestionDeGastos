@@ -126,7 +126,10 @@ public class PantallaCategorias extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelBackMouseClicked
 
     private void jButtonVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVerActionPerformed
-        // TODO add your handling code here:
+        VerCategoria verCateoria = new VerCategoria();
+        verCateoria.setVisible(true);
+        verCateoria.setLocationRelativeTo(null);
+        dispose();
         
     }//GEN-LAST:event_jButtonVerActionPerformed
 
