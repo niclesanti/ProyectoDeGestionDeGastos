@@ -13,7 +13,7 @@ import com.mycompany.ui.RegistroUsuario;
  */
 public class LoginController {
     // Instancia única (Singleton)
-    private static LoginController instance = new LoginController();;
+    private static final LoginController instance = new LoginController();;
     
     private final Login login;
     private final RegistroUsuario registro;
@@ -28,10 +28,7 @@ public class LoginController {
     
     // Método público estático para obtener la instancia única de LoginController
     public static LoginController getInstance() {
-        /*if(LoginController.instance == null){
-            LoginController.instance = new LoginController();
-        }
-        return LoginController.instance;*/
+
         return instance;
         
     }

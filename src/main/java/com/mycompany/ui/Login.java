@@ -5,6 +5,7 @@
 package com.mycompany.ui;
 
 import com.mycompany.controller.LoginController;
+import com.mycompany.controller.MainScreenController;
 import javax.swing.ImageIcon;
 
 /**
@@ -210,18 +211,19 @@ public class Login extends javax.swing.JFrame {
 
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
         // TODO add your handling code here:
+        MainScreenController mainScreenController = MainScreenController.getInstance();
+        LoginController loginController = LoginController.getInstance();
         
-        /*
-        dispose();
-        PantallaPrincipal principal = new PantallaPrincipal();
-        principal.setVisible(true);
-        principal.setLocationRelativeTo(null);*/
+        mainScreenController.pantallaPrincipalVisible();
+        loginController.loginCerrar();
+        
     }//GEN-LAST:event_jButtonEntrarActionPerformed
 
     private void jButtonCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarActionPerformed
         // TODO add your handling code here:
         LoginController loginController = LoginController.getInstance();
         loginController.loginCerrar();
+        System.exit(0);  // Finaliza todo el programa
     }//GEN-LAST:event_jButtonCerrarActionPerformed
 
     private void jLabelDeseoRegestrarmeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelDeseoRegestrarmeMouseClicked

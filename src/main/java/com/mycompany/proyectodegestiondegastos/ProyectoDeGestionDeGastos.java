@@ -6,7 +6,6 @@
 package com.mycompany.proyectodegestiondegastos;
 
 import com.mycompany.controller.LoginController;
-import javax.swing.SwingUtilities;
 
 
 
@@ -18,12 +17,12 @@ public class ProyectoDeGestionDeGastos {
 
     public static void main(String[] args) {
         
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 // Crear y mostrar la pantalla de login
                 LoginController loginController = LoginController.getInstance();
                 loginController.loginVisible();
+                
             }
         });
         

@@ -4,6 +4,9 @@
  */
 package com.mycompany.ui;
 
+import com.mycompany.controller.LoginController;
+import com.mycompany.controller.MainScreenController;
+import com.mycompany.controller.TransactionsController;
 import javax.swing.ImageIcon;
 
 
@@ -971,53 +974,42 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        dispose();
-        Login login = new Login();
-        login.setVisible(true);
-        login.setLocationRelativeTo(null);
+        LoginController loginController = LoginController.getInstance();
+        MainScreenController mainScreenController = MainScreenController.getInstance();
+        
+        loginController.loginVisible();
+        mainScreenController.pantallaPincipalCerrar();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jLabelTransactionsImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTransactionsImagenMouseClicked
         // TODO add your handling code here:
-        PantallaTransacciones transaccionesPantalla = new PantallaTransacciones();
-        transaccionesPantalla.setVisible(true);
-        transaccionesPantalla.setLocationRelativeTo(null);
+        TransactionsController transactionsController = TransactionsController.getInstance();
+        
+        transactionsController.pantallaTransaccionesVisible();
     }//GEN-LAST:event_jLabelTransactionsImagenMouseClicked
 
     private void jLabelSubeFuncionImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSubeFuncionImagenMouseClicked
         // TODO add your handling code here:
-        PantallaSube subePantalla = new PantallaSube();
-        subePantalla.setVisible(true);
-        subePantalla.setLocationRelativeTo(null);
     }//GEN-LAST:event_jLabelSubeFuncionImagenMouseClicked
 
     private void jLabelCategoriesImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelCategoriesImagenMouseClicked
         // TODO add your handling code here:
-        PantallaCategorias categoriasPantalla = new PantallaCategorias();
-        categoriasPantalla.setVisible(true);
-        categoriasPantalla.setLocationRelativeTo(null);
     }//GEN-LAST:event_jLabelCategoriesImagenMouseClicked
 
     private void jLabelBankImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBankImagenMouseClicked
         // TODO add your handling code here:
-        PantallaCuentas cuentasPantalla = new PantallaCuentas();
-        cuentasPantalla.setVisible(true);
-        cuentasPantalla.setLocationRelativeTo(null);
     }//GEN-LAST:event_jLabelBankImagenMouseClicked
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-        AltaTransacciones altaTransaccion = new AltaTransacciones();
-        altaTransaccion.setVisible(true);
-        altaTransaccion.setLocationRelativeTo(null);
+        TransactionsController transactionsController = TransactionsController.getInstance();
+        
+        transactionsController.altaTransaccionesVisible();
         
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
-        AltaCategoria altaCategoria = new AltaCategoria();
-        altaCategoria.setVisible(true);
-        altaCategoria.setLocationRelativeTo(null);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
 
