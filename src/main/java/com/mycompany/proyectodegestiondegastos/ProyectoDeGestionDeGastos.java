@@ -5,7 +5,9 @@
 
 package com.mycompany.proyectodegestiondegastos;
 
-import com.mycompany.ui.*;
+import com.mycompany.controller.LoginController;
+import javax.swing.SwingUtilities;
+
 
 
 /**
@@ -15,12 +17,15 @@ import com.mycompany.ui.*;
 public class ProyectoDeGestionDeGastos {
 
     public static void main(String[] args) {
-        //System.out.println("Hello World!");
         
-        Login login = new Login();
-        login.setVisible(true);
-        login.setLocationRelativeTo(null);
-
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                // Crear y mostrar la pantalla de login
+                LoginController loginController = LoginController.getInstance();
+                loginController.loginVisible();
+            }
+        });
         
     }
 }

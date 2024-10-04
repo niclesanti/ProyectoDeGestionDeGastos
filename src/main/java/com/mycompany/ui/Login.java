@@ -4,6 +4,7 @@
  */
 package com.mycompany.ui;
 
+import com.mycompany.controller.LoginController;
 import javax.swing.ImageIcon;
 
 /**
@@ -209,23 +210,26 @@ public class Login extends javax.swing.JFrame {
 
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
         // TODO add your handling code here:
+        
+        /*
         dispose();
         PantallaPrincipal principal = new PantallaPrincipal();
         principal.setVisible(true);
-        principal.setLocationRelativeTo(null);
+        principal.setLocationRelativeTo(null);*/
     }//GEN-LAST:event_jButtonEntrarActionPerformed
 
     private void jButtonCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarActionPerformed
         // TODO add your handling code here:
-        dispose();
+        LoginController loginController = LoginController.getInstance();
+        loginController.loginCerrar();
     }//GEN-LAST:event_jButtonCerrarActionPerformed
 
     private void jLabelDeseoRegestrarmeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelDeseoRegestrarmeMouseClicked
         // TODO add your handling code here:
-        RegistroUsuario registro = new RegistroUsuario();
-        registro.setVisible(true);
-        registro.setLocationRelativeTo(null);
-        dispose();
+        LoginController loginController = LoginController.getInstance();
+        loginController.registrarUsuarioVisible();
+        loginController.loginCerrar();
+        
     }//GEN-LAST:event_jLabelDeseoRegestrarmeMouseClicked
 
 
