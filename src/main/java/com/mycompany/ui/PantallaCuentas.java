@@ -35,12 +35,10 @@ public class PantallaCuentas extends javax.swing.JFrame {
         jLabelBack = new javax.swing.JLabel();
         jLabelMenuCuentasBancarias = new javax.swing.JLabel();
         jButtonNueva = new javax.swing.JButton();
-        jButtonRemover = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Mi Billetera - Cuentas");
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
 
         jPanelBG.setBackground(new java.awt.Color(255, 255, 255));
@@ -80,17 +78,6 @@ public class PantallaCuentas extends javax.swing.JFrame {
         });
         jPanelBG.add(jButtonNueva, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 230, 30));
 
-        jButtonRemover.setBackground(new java.awt.Color(52, 84, 61));
-        jButtonRemover.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonRemover.setText("REMOVER");
-        jButtonRemover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButtonRemover.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRemoverActionPerformed(evt);
-            }
-        });
-        jPanelBG.add(jButtonRemover, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 230, 30));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -115,12 +102,11 @@ public class PantallaCuentas extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelBackMouseClicked
 
     private void jButtonNuevaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuevaActionPerformed
-        // TODO add your handling code here:
+        AltaCuenta nuevaCuenta = new AltaCuenta();
+        nuevaCuenta.setVisible(true);
+        nuevaCuenta.setLocationRelativeTo(null);
+        dispose();
     }//GEN-LAST:event_jButtonNuevaActionPerformed
-
-    private void jButtonRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemoverActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonRemoverActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,7 +145,6 @@ public class PantallaCuentas extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonNueva;
-    private javax.swing.JButton jButtonRemover;
     private javax.swing.JLabel jLabelBack;
     private javax.swing.JLabel jLabelImagenMenuTransacciones;
     private javax.swing.JLabel jLabelMenuCuentasBancarias;

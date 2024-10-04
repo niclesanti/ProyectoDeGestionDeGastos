@@ -35,12 +35,11 @@ public class PantallaSube extends javax.swing.JFrame {
         jLabelBack = new javax.swing.JLabel();
         jLabelMenuSube = new javax.swing.JLabel();
         jButtonNueva = new javax.swing.JButton();
-        jButtonRemover = new javax.swing.JButton();
+        jButtonBuscarRemover = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Mi Billetera - SUBE");
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(600, 400));
         setResizable(false);
 
         jPanelBG.setBackground(new java.awt.Color(255, 255, 255));
@@ -78,18 +77,18 @@ public class PantallaSube extends javax.swing.JFrame {
                 jButtonNuevaActionPerformed(evt);
             }
         });
-        jPanelBG.add(jButtonNueva, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 230, 30));
+        jPanelBG.add(jButtonNueva, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 250, 30));
 
-        jButtonRemover.setBackground(new java.awt.Color(52, 84, 61));
-        jButtonRemover.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonRemover.setText("REMOVER");
-        jButtonRemover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButtonRemover.addActionListener(new java.awt.event.ActionListener() {
+        jButtonBuscarRemover.setBackground(new java.awt.Color(52, 84, 61));
+        jButtonBuscarRemover.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonBuscarRemover.setText("BUSCAR-SELECCIONAR / REMOVER");
+        jButtonBuscarRemover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonBuscarRemover.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRemoverActionPerformed(evt);
+                jButtonBuscarRemoverActionPerformed(evt);
             }
         });
-        jPanelBG.add(jButtonRemover, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 230, 30));
+        jPanelBG.add(jButtonBuscarRemover, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 250, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -116,50 +115,24 @@ public class PantallaSube extends javax.swing.JFrame {
 
     private void jButtonNuevaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuevaActionPerformed
         // TODO add your handling code here:
+        AltaSube nuevaSube = new AltaSube();
+        nuevaSube.setVisible(true);
+        nuevaSube.setLocationRelativeTo(null);
+        dispose();
     }//GEN-LAST:event_jButtonNuevaActionPerformed
 
-    private void jButtonRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemoverActionPerformed
+    private void jButtonBuscarRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarRemoverActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonRemoverActionPerformed
+        BuscarSube buscarSube = new BuscarSube();
+        buscarSube.setVisible(true);
+        buscarSube.setLocationRelativeTo(null);
+        dispose();
+    }//GEN-LAST:event_jButtonBuscarRemoverActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PantallaSube.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PantallaSube.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PantallaSube.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PantallaSube.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new PantallaSube().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonBuscarRemover;
     private javax.swing.JButton jButtonNueva;
-    private javax.swing.JButton jButtonRemover;
     private javax.swing.JLabel jLabelBack;
     private javax.swing.JLabel jLabelImagenMenuTransacciones;
     private javax.swing.JLabel jLabelMenuSube;
