@@ -34,6 +34,7 @@ public class MensajeConfirmacion extends javax.swing.JFrame {
         jLabelMensajeConfirmacion = new javax.swing.JLabel();
         jButtonNo = new javax.swing.JButton();
         jButtonSi = new javax.swing.JButton();
+        jLabelLogoConfirmacion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Confirmación");
@@ -68,12 +69,16 @@ public class MensajeConfirmacion extends javax.swing.JFrame {
             }
         });
 
+        jLabelLogoConfirmacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/images/warning.png"))); // NOI18N
+
         javax.swing.GroupLayout jPanelBGLayout = new javax.swing.GroupLayout(jPanelBG);
         jPanelBG.setLayout(jPanelBGLayout);
         jPanelBGLayout.setHorizontalGroup(
             jPanelBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBGLayout.createSequentialGroup()
-                .addContainerGap(61, Short.MAX_VALUE)
+                .addGap(16, 16, 16)
+                .addComponent(jLabelLogoConfirmacion)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(jPanelBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelTituloMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -89,9 +94,11 @@ public class MensajeConfirmacion extends javax.swing.JFrame {
         jPanelBGLayout.setVerticalGroup(
             jPanelBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelBGLayout.createSequentialGroup()
-                .addContainerGap(57, Short.MAX_VALUE)
-                .addComponent(jLabelTituloMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap(39, Short.MAX_VALUE)
+                .addGroup(jPanelBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabelLogoConfirmacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelTituloMensaje, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
                 .addComponent(jLabelMensajeConfirmacion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addGroup(jPanelBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -132,6 +139,7 @@ public class MensajeConfirmacion extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonNo;
     private javax.swing.JButton jButtonSi;
+    private javax.swing.JLabel jLabelLogoConfirmacion;
     private javax.swing.JLabel jLabelMensajeConfirmacion;
     private javax.swing.JLabel jLabelTituloMensaje;
     private javax.swing.JPanel jPanelBG;

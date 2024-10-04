@@ -127,6 +127,9 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -603,7 +606,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jPanelSube.add(jLabelVerDineroSube, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 70, 34));
 
         jLabelSubeImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/images/subelogo.png"))); // NOI18N
-        jLabelSubeImagen.setPreferredSize(new java.awt.Dimension(480, 171));
         jPanelSube.add(jLabelSubeImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 480, 181));
 
         jLabelSube.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -896,8 +898,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jMenu1.setText("Archivo");
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem1.setBackground(new java.awt.Color(51, 51, 51));
-        jMenuItem1.setForeground(new java.awt.Color(229, 238, 230));
         jMenuItem1.setText("Cerrar sesión");
         jMenuItem1.setBorder(null);
         jMenuItem1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -912,6 +912,34 @@ public class PantallaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem1);
+
+        jMenu3.setBorder(null);
+        jMenu3.setText("Funciones");
+        jMenu3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem2.setText("Transaccion");
+        jMenuItem2.setBorder(null);
+        jMenuItem2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem2);
+
+        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_K, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem3.setText("Categoria");
+        jMenuItem3.setBorder(null);
+        jMenuItem3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem3);
+
+        jMenu1.add(jMenu3);
 
         jMenuBar1.add(jMenu1);
 
@@ -976,6 +1004,21 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         cuentasPantalla.setVisible(true);
         cuentasPantalla.setLocationRelativeTo(null);
     }//GEN-LAST:event_jLabelBankImagenMouseClicked
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        AltaTransacciones altaTransaccion = new AltaTransacciones();
+        altaTransaccion.setVisible(true);
+        altaTransaccion.setLocationRelativeTo(null);
+        
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        AltaCategoria altaCategoria = new AltaCategoria();
+        altaCategoria.setVisible(true);
+        altaCategoria.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1059,8 +1102,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelViewImagenSube;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanelAhorros;
     private javax.swing.JPanel jPanelBG;
