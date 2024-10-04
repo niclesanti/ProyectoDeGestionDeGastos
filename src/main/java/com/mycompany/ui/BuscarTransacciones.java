@@ -53,7 +53,7 @@ public class BuscarTransacciones extends javax.swing.JFrame {
         jLabel50 = new javax.swing.JLabel();
         jScrollPaneTransacciones = new javax.swing.JScrollPane();
         jTableTransacciones = new javax.swing.JTable();
-        jButtonAceptar = new javax.swing.JButton();
+        jButtonRemover = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Mi Billetera - Buscar transaccion");
@@ -140,7 +140,7 @@ public class BuscarTransacciones extends javax.swing.JFrame {
                 jButtonVerActionPerformed(evt);
             }
         });
-        jPanelBG.add(jButtonVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 440, 110, 30));
+        jPanelBG.add(jButtonVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, 110, 30));
 
         jLabelCuenta.setText("CUENTA");
         jPanelBG.add(jLabelCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, -1, -1));
@@ -297,16 +297,16 @@ public class BuscarTransacciones extends javax.swing.JFrame {
 
         jPanelBG.add(jScrollPaneTransacciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 528, 154));
 
-        jButtonAceptar.setBackground(new java.awt.Color(52, 84, 61));
-        jButtonAceptar.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonAceptar.setText("ACEPTAR");
-        jButtonAceptar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButtonAceptar.addActionListener(new java.awt.event.ActionListener() {
+        jButtonRemover.setBackground(new java.awt.Color(52, 84, 61));
+        jButtonRemover.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonRemover.setText("REMOVER");
+        jButtonRemover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonRemover.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonAceptarActionPerformed(evt);
+                jButtonRemoverActionPerformed(evt);
             }
         });
-        jPanelBG.add(jButtonAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, 110, 30));
+        jPanelBG.add(jButtonRemover, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 440, 110, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -339,48 +339,13 @@ public class BuscarTransacciones extends javax.swing.JFrame {
         seleccionTransaccion.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButtonVerActionPerformed
 
-    private void jButtonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarActionPerformed
+    private void jButtonRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemoverActionPerformed
         // TODO add your handling code here:
-        dispose();
-    }//GEN-LAST:event_jButtonAceptarActionPerformed
+    }//GEN-LAST:event_jButtonRemoverActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BuscarTransacciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BuscarTransacciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BuscarTransacciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BuscarTransacciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new BuscarTransacciones().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonAceptar;
+    private javax.swing.JButton jButtonRemover;
     private javax.swing.JButton jButtonVer;
     private javax.swing.JComboBox<String> jComboBoxCategorias;
     private javax.swing.JComboBox<String> jComboBoxCuentas;

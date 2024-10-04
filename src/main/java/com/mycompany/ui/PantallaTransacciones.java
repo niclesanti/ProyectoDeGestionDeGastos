@@ -36,7 +36,6 @@ public class PantallaTransacciones extends javax.swing.JFrame {
         jLabelMenuTransacciones = new javax.swing.JLabel();
         jButtonBuscar = new javax.swing.JButton();
         jButtonNueva = new javax.swing.JButton();
-        jButtonRemover = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Mi Billetera - Transacciones");
@@ -73,14 +72,14 @@ public class PantallaTransacciones extends javax.swing.JFrame {
 
         jButtonBuscar.setBackground(new java.awt.Color(52, 84, 61));
         jButtonBuscar.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonBuscar.setText("BUSCAR");
+        jButtonBuscar.setText("BUSCAR-SELECCIONAR / REMOVER");
         jButtonBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonBuscarActionPerformed(evt);
             }
         });
-        jPanelBG.add(jButtonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 230, 30));
+        jPanelBG.add(jButtonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 240, 30));
 
         jButtonNueva.setBackground(new java.awt.Color(52, 84, 61));
         jButtonNueva.setForeground(new java.awt.Color(255, 255, 255));
@@ -91,18 +90,7 @@ public class PantallaTransacciones extends javax.swing.JFrame {
                 jButtonNuevaActionPerformed(evt);
             }
         });
-        jPanelBG.add(jButtonNueva, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 230, 30));
-
-        jButtonRemover.setBackground(new java.awt.Color(52, 84, 61));
-        jButtonRemover.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonRemover.setText("REMOVER");
-        jButtonRemover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButtonRemover.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRemoverActionPerformed(evt);
-            }
-        });
-        jPanelBG.add(jButtonRemover, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 230, 30));
+        jPanelBG.add(jButtonNueva, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 240, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -143,19 +131,10 @@ public class PantallaTransacciones extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButtonNuevaActionPerformed
 
-    private void jButtonRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemoverActionPerformed
-        // TODO add your handling code here:
-        RemoverTransacciones removerTransaccion = new RemoverTransacciones();
-        removerTransaccion.setVisible(true);
-        removerTransaccion.setLocationRelativeTo(null);
-        dispose();
-    }//GEN-LAST:event_jButtonRemoverActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonNueva;
-    private javax.swing.JButton jButtonRemover;
     private javax.swing.JLabel jLabelBack;
     private javax.swing.JLabel jLabelImagenMenuTransacciones;
     private javax.swing.JLabel jLabelMenuTransacciones;
