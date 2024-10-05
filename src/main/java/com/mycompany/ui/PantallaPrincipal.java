@@ -4,6 +4,7 @@
  */
 package com.mycompany.ui;
 
+import com.mycompany.controller.CategoriesController;
 import com.mycompany.controller.LoginController;
 import com.mycompany.controller.MainScreenController;
 import com.mycompany.controller.TransactionsController;
@@ -994,6 +995,9 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
     private void jLabelCategoriesImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelCategoriesImagenMouseClicked
         // TODO add your handling code here:
+        CategoriesController categoriesController = CategoriesController.getInstance();
+        
+        categoriesController.pantallaCategoriasVisible();
     }//GEN-LAST:event_jLabelCategoriesImagenMouseClicked
 
     private void jLabelBankImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBankImagenMouseClicked

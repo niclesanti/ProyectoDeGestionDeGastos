@@ -4,6 +4,7 @@
  */
 package com.mycompany.ui;
 
+import com.mycompany.controller.CategoriesController;
 import javax.swing.ImageIcon;
 
 /**
@@ -122,22 +123,23 @@ public class PantallaCategorias extends javax.swing.JFrame {
 
     private void jLabelBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackMouseClicked
         // TODO add your handling code here:
-        dispose();
+        CategoriesController categoriesController = CategoriesController.getInstance();
+        
+        categoriesController.pantallaCategoriasCerrar();
     }//GEN-LAST:event_jLabelBackMouseClicked
 
     private void jButtonVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVerActionPerformed
-        VerCategoria verCateoria = new VerCategoria();
-        verCateoria.setVisible(true);
-        verCateoria.setLocationRelativeTo(null);
-        dispose();
+        CategoriesController categoriesController = CategoriesController.getInstance();
         
+        categoriesController.verCategoriaVisible();
+        categoriesController.pantallaCategoriasCerrar();
     }//GEN-LAST:event_jButtonVerActionPerformed
 
     private void jButtonNuevaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuevaActionPerformed
-        AltaCategoria nuevaCateoria = new AltaCategoria();
-        nuevaCateoria.setVisible(true);
-        nuevaCateoria.setLocationRelativeTo(null);
-        dispose();
+        CategoriesController categoriesController = CategoriesController.getInstance();
+        
+        categoriesController.altaCategoriaVisible();
+        categoriesController.pantallaCategoriasCerrar();
     }//GEN-LAST:event_jButtonNuevaActionPerformed
 
 
