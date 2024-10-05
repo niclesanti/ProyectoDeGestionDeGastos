@@ -4,6 +4,7 @@
  */
 package com.mycompany.ui;
 
+import com.mycompany.controller.TransactionsController;
 import javax.swing.ImageIcon;
 
 /**
@@ -136,12 +137,16 @@ public class AltaDescripcion extends javax.swing.JFrame {
 
     private void jLabelBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackMouseClicked
         // TODO add your handling code here:
-        dispose();
+        TransactionsController transactionsController = TransactionsController.getInstance();
+        
+        transactionsController.altaDescripcionCerrar();
     }//GEN-LAST:event_jLabelBackMouseClicked
 
     private void jButtonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarActionPerformed
         // TODO add your handling code here:
-        dispose();
+        TransactionsController transactionsController = TransactionsController.getInstance();
+        
+        transactionsController.altaDescripcionCerrar();
     }//GEN-LAST:event_jButtonAceptarActionPerformed
 
 

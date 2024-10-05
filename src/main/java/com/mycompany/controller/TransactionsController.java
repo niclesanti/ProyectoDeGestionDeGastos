@@ -4,6 +4,7 @@
  */
 package com.mycompany.controller;
 
+import com.mycompany.ui.AltaDescripcion;
 import com.mycompany.ui.AltaTransacciones;
 import com.mycompany.ui.BuscarTransacciones;
 import com.mycompany.ui.PantallaTransacciones;
@@ -21,12 +22,14 @@ public class TransactionsController {
     private final AltaTransacciones nuevaTransaccion;
     private final BuscarTransacciones buscarTransacciones;
     private final SeleccionTransaccion seleccionTransaccion;
+    private final AltaDescripcion nuevaDescripcion;
     
     private TransactionsController(){
         this.pantallaTransacciones = new PantallaTransacciones();
         this.nuevaTransaccion = new AltaTransacciones();
         this.buscarTransacciones = new BuscarTransacciones();
         this.seleccionTransaccion = new SeleccionTransaccion();
+        this.nuevaDescripcion = new AltaDescripcion();
     }
     
     // Método público estático para obtener la instancia única de TransactionsController
@@ -70,5 +73,14 @@ public class TransactionsController {
     
     public void seleccionTransaccionCerrar(){
         this.seleccionTransaccion.dispose();
+    }
+    
+    public void altaDescripcionVisible(){
+        this.nuevaDescripcion.setVisible(true);
+        this.nuevaDescripcion.setLocationRelativeTo(null);
+    }
+    
+    public void altaDescripcionCerrar(){
+        this.nuevaDescripcion.dispose();
     }
 }
