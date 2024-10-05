@@ -4,6 +4,7 @@
  */
 package com.mycompany.ui;
 
+import com.mycompany.controller.SubeController;
 import javax.swing.ImageIcon;
 
 /**
@@ -110,23 +111,26 @@ public class PantallaSube extends javax.swing.JFrame {
 
     private void jLabelBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackMouseClicked
         // TODO add your handling code here:
-        dispose();
+        SubeController subeController = SubeController.getInstance();
+        
+        subeController.pantallaSubeCerrar();
     }//GEN-LAST:event_jLabelBackMouseClicked
 
     private void jButtonNuevaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuevaActionPerformed
         // TODO add your handling code here:
-        AltaSube nuevaSube = new AltaSube();
-        nuevaSube.setVisible(true);
-        nuevaSube.setLocationRelativeTo(null);
-        dispose();
+        SubeController subeController = SubeController.getInstance();
+        
+        subeController.altaSubeVisible();
+        subeController.pantallaSubeCerrar();
     }//GEN-LAST:event_jButtonNuevaActionPerformed
 
     private void jButtonBuscarRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarRemoverActionPerformed
         // TODO add your handling code here:
-        BuscarSube buscarSube = new BuscarSube();
-        buscarSube.setVisible(true);
-        buscarSube.setLocationRelativeTo(null);
-        dispose();
+        SubeController subeController = SubeController.getInstance();
+        
+        subeController.buscarSubeVisible();
+        subeController.pantallaSubeCerrar();
+        
     }//GEN-LAST:event_jButtonBuscarRemoverActionPerformed
 
 

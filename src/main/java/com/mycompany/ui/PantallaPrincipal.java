@@ -7,6 +7,7 @@ package com.mycompany.ui;
 import com.mycompany.controller.CategoriesController;
 import com.mycompany.controller.LoginController;
 import com.mycompany.controller.MainScreenController;
+import com.mycompany.controller.SubeController;
 import com.mycompany.controller.TransactionsController;
 import javax.swing.ImageIcon;
 
@@ -991,6 +992,9 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
     private void jLabelSubeFuncionImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSubeFuncionImagenMouseClicked
         // TODO add your handling code here:
+        SubeController subeController = SubeController.getInstance();
+        
+        subeController.pantallaSubeVisible();
     }//GEN-LAST:event_jLabelSubeFuncionImagenMouseClicked
 
     private void jLabelCategoriesImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelCategoriesImagenMouseClicked
