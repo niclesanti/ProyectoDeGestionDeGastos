@@ -4,6 +4,7 @@
  */
 package com.mycompany.ui;
 
+import com.mycompany.controller.AccountsController;
 import javax.swing.ImageIcon;
 
 /**
@@ -98,14 +99,16 @@ public class PantallaCuentas extends javax.swing.JFrame {
 
     private void jLabelBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackMouseClicked
         // TODO add your handling code here:
-        dispose();
+        AccountsController accountsController = AccountsController.getInstance();
+        
+        accountsController.pantallaCuentasCerrar();
     }//GEN-LAST:event_jLabelBackMouseClicked
 
     private void jButtonNuevaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuevaActionPerformed
-        AltaCuenta nuevaCuenta = new AltaCuenta();
-        nuevaCuenta.setVisible(true);
-        nuevaCuenta.setLocationRelativeTo(null);
-        dispose();
+        AccountsController accountsController = AccountsController.getInstance();
+        
+        accountsController.altaCuentaVisible();
+        accountsController.pantallaCuentasCerrar();
     }//GEN-LAST:event_jButtonNuevaActionPerformed
 
 

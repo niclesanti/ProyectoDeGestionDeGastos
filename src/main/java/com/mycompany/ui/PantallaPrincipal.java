@@ -4,6 +4,7 @@
  */
 package com.mycompany.ui;
 
+import com.mycompany.controller.AccountsController;
 import com.mycompany.controller.CategoriesController;
 import com.mycompany.controller.LoginController;
 import com.mycompany.controller.MainScreenController;
@@ -1006,6 +1007,9 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
     private void jLabelBankImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBankImagenMouseClicked
         // TODO add your handling code here:
+        AccountsController accountsController = AccountsController.getInstance();
+        
+        accountsController.pantallaCuentasVisible();
     }//GEN-LAST:event_jLabelBankImagenMouseClicked
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
