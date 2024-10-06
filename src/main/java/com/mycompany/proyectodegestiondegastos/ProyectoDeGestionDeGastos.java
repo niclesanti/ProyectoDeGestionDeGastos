@@ -6,6 +6,8 @@
 package com.mycompany.proyectodegestiondegastos;
 
 import com.mycompany.controller.LoginController;
+import com.mycompany.controller.PresentationController;
+import java.util.concurrent.Semaphore;
 
 
 
@@ -14,13 +16,22 @@ import com.mycompany.controller.LoginController;
  * @author nicle
  */
 public class ProyectoDeGestionDeGastos {
-
+    public static Semaphore empezarPrograma = new Semaphore(0);
+    
     public static void main(String[] args) {
+        
+        
+        
+        new Thread(new PresentationController()).start();
+        
+        empezarPrograma.acquireUninterruptibly();
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 // Crear y mostrar la pantalla de login
                 LoginController loginController = LoginController.getInstance();
+                
+                
                 loginController.loginVisible();
                 
             }
