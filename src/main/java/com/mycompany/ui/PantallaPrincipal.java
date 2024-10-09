@@ -4,6 +4,12 @@
  */
 package com.mycompany.ui;
 
+import com.mycompany.controller.AccountsController;
+import com.mycompany.controller.CategoriesController;
+import com.mycompany.controller.LoginController;
+import com.mycompany.controller.MainScreenController;
+import com.mycompany.controller.SubeController;
+import com.mycompany.controller.TransactionsController;
 import javax.swing.ImageIcon;
 
 
@@ -126,15 +132,19 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jLabelFondoLogo4 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        jMenuItemFactorMoneda = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Mi Billetera");
         setBackground(new java.awt.Color(229, 238, 230));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         setIconImages(null);
         setMinimumSize(new java.awt.Dimension(1366, 720));
 
@@ -581,32 +591,32 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         jLabelMontoCantSube.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabelMontoCantSube.setText("0");
-        jPanelSube.add(jLabelMontoCantSube, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 220, -1));
+        jPanelSube.add(jLabelMontoCantSube, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 220, -1));
 
         jLabelMontoSube.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabelMontoSube.setText("MONTO: $");
-        jPanelSube.add(jLabelMontoSube, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
+        jPanelSube.add(jLabelMontoSube, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
 
         jLabelNumeroSube1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabelNumeroSube1.setText("NOMBRE SUBE");
-        jPanelSube.add(jLabelNumeroSube1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
+        jPanelSube.add(jLabelNumeroSube1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
 
         jLabelNumeroSube.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabelNumeroSube.setText("NUMERO SUBE");
-        jPanelSube.add(jLabelNumeroSube, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, -1, -1));
+        jPanelSube.add(jLabelNumeroSube, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, -1));
 
         jLabelViewImagenSube.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelViewImagenSube.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/images/view.png"))); // NOI18N
         jLabelViewImagenSube.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelViewImagenSube.setEnabled(false);
-        jPanelSube.add(jLabelViewImagenSube, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, 40, 34));
+        jPanelSube.add(jLabelViewImagenSube, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 150, 40, 34));
 
         jLabelVerDineroSube.setText("Ver dinero");
         jLabelVerDineroSube.setEnabled(false);
-        jPanelSube.add(jLabelVerDineroSube, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 70, 34));
+        jPanelSube.add(jLabelVerDineroSube, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, 70, 34));
 
         jLabelSubeImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/images/subelogo.png"))); // NOI18N
-        jPanelSube.add(jLabelSubeImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 480, 181));
+        jPanelSube.add(jLabelSubeImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 480, 190));
 
         jLabelSube.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabelSube.setText("SUBE");
@@ -894,24 +904,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jMenuBar1.setBorderPainted(false);
         jMenuBar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jMenu1.setBorder(null);
         jMenu1.setText("Archivo");
-
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem1.setText("Cerrar sesión");
-        jMenuItem1.setBorder(null);
-        jMenuItem1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenuItem1MouseClicked(evt);
-            }
-        });
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem1);
 
         jMenu3.setBorder(null);
         jMenu3.setText("Funciones");
@@ -941,7 +934,43 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         jMenu1.add(jMenu3);
 
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem1.setText("Cerrar sesión");
+        jMenuItem1.setBorder(null);
+        jMenuItem1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem1MouseClicked(evt);
+            }
+        });
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_K, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem4.setText("Salir de la aplicación");
+        jMenuItem4.setBorder(null);
+        jMenuItem4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenu1.add(jMenuItem4);
+
         jMenuBar1.add(jMenu1);
+
+        jMenu4.setText("Editar");
+
+        jMenuItemFactorMoneda.setText("Cambiar factor moneda");
+        jMenuItemFactorMoneda.setBorder(null);
+        jMenuItemFactorMoneda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuItemFactorMoneda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemFactorMonedaActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItemFactorMoneda);
+
+        jMenuBar1.add(jMenu4);
 
         jMenu2.setText("Ayuda");
         jMenuBar1.add(jMenu2);
@@ -971,54 +1000,63 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        dispose();
-        Login login = new Login();
-        login.setVisible(true);
-        login.setLocationRelativeTo(null);
+        LoginController loginController = LoginController.getInstance();
+        MainScreenController mainScreenController = MainScreenController.getInstance();
+        
+        loginController.loginVisible();
+        mainScreenController.pantallaPincipalCerrar();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jLabelTransactionsImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTransactionsImagenMouseClicked
         // TODO add your handling code here:
-        PantallaTransacciones transaccionesPantalla = new PantallaTransacciones();
-        transaccionesPantalla.setVisible(true);
-        transaccionesPantalla.setLocationRelativeTo(null);
+        TransactionsController transactionsController = TransactionsController.getInstance();
+        
+        transactionsController.pantallaTransaccionesVisible();
     }//GEN-LAST:event_jLabelTransactionsImagenMouseClicked
 
     private void jLabelSubeFuncionImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSubeFuncionImagenMouseClicked
         // TODO add your handling code here:
-        PantallaSube subePantalla = new PantallaSube();
-        subePantalla.setVisible(true);
-        subePantalla.setLocationRelativeTo(null);
+        SubeController subeController = SubeController.getInstance();
+        
+        subeController.pantallaSubeVisible();
     }//GEN-LAST:event_jLabelSubeFuncionImagenMouseClicked
 
     private void jLabelCategoriesImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelCategoriesImagenMouseClicked
         // TODO add your handling code here:
-        PantallaCategorias categoriasPantalla = new PantallaCategorias();
-        categoriasPantalla.setVisible(true);
-        categoriasPantalla.setLocationRelativeTo(null);
+        CategoriesController categoriesController = CategoriesController.getInstance();
+        
+        categoriesController.pantallaCategoriasVisible();
     }//GEN-LAST:event_jLabelCategoriesImagenMouseClicked
 
     private void jLabelBankImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBankImagenMouseClicked
         // TODO add your handling code here:
-        PantallaCuentas cuentasPantalla = new PantallaCuentas();
-        cuentasPantalla.setVisible(true);
-        cuentasPantalla.setLocationRelativeTo(null);
+        AccountsController accountsController = AccountsController.getInstance();
+        
+        accountsController.pantallaCuentasVisible();
     }//GEN-LAST:event_jLabelBankImagenMouseClicked
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-        AltaTransacciones altaTransaccion = new AltaTransacciones();
-        altaTransaccion.setVisible(true);
-        altaTransaccion.setLocationRelativeTo(null);
+        TransactionsController transactionsController = TransactionsController.getInstance();
+        
+        transactionsController.altaTransaccionesVisible();
         
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
-        AltaCategoria altaCategoria = new AltaCategoria();
-        altaCategoria.setVisible(true);
-        altaCategoria.setLocationRelativeTo(null);
+        MainScreenController mainScreenController = MainScreenController.getInstance();
+        
+        mainScreenController.pantallaPincipalCerrar();
+        System.exit(0);  // Finaliza todo el programa
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItemFactorMonedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemFactorMonedaActionPerformed
+        // TODO add your handling code here:
+        TransactionsController transactionsController = TransactionsController.getInstance();
+        
+        transactionsController.modificarMonedaVisible();
+    }//GEN-LAST:event_jMenuItemFactorMonedaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1103,10 +1141,13 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItemFactorMoneda;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanelAhorros;
     private javax.swing.JPanel jPanelBG;

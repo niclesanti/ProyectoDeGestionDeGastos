@@ -4,19 +4,19 @@
  */
 package com.mycompany.ui;
 
-import com.mycompany.controller.AccountsController;
+import com.mycompany.controller.TransactionsController;
 import javax.swing.ImageIcon;
 
 /**
  *
  * @author nicle
  */
-public class AltaCuenta extends javax.swing.JFrame {
+public class AltaMoneda extends javax.swing.JFrame {
 
     /**
-     * Creates new form AltaCuenta
+     * Creates new form AltaMoneda
      */
-    public AltaCuenta() {
+    public AltaMoneda() {
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("/com/mycompany/images/miBilletera.png")).getImage());
     }
@@ -32,20 +32,21 @@ public class AltaCuenta extends javax.swing.JFrame {
 
         jPanelBG = new javax.swing.JPanel();
         jLabelBack = new javax.swing.JLabel();
-        jLabelNuevaCuenta = new javax.swing.JLabel();
+        jLabelNuevaMoneda = new javax.swing.JLabel();
         jTextFieldNombre = new javax.swing.JTextField();
         jLabelNombre = new javax.swing.JLabel();
-        jTextFieldCantPesos = new javax.swing.JTextField();
-        jLabelCantInicialPesos = new javax.swing.JLabel();
-        jTextFieldCantDolares = new javax.swing.JTextField();
-        jLabelCantInicialDolares = new javax.swing.JLabel();
+        jTextFieldAbreviatura = new javax.swing.JTextField();
+        jLabelAbreviatura = new javax.swing.JLabel();
+        jTextFieldFactorConversion = new javax.swing.JTextField();
+        jLabelFactorConversion = new javax.swing.JLabel();
         jButtonAceptar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Mi Billetera - Moneda");
         setUndecorated(true);
         setResizable(false);
 
-        jPanelBG.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelBG.setBackground(new java.awt.Color(248, 253, 249));
 
         jLabelBack.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/images/back.png"))); // NOI18N
@@ -57,23 +58,23 @@ public class AltaCuenta extends javax.swing.JFrame {
             }
         });
 
-        jLabelNuevaCuenta.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabelNuevaCuenta.setText("NUEVA CUENTA");
+        jLabelNuevaMoneda.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelNuevaMoneda.setText("NUEVA MONEDA");
 
-        jTextFieldNombre.setBackground(new java.awt.Color(255, 255, 255));
+        jTextFieldNombre.setBackground(new java.awt.Color(248, 253, 249));
         jTextFieldNombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
 
-        jLabelNombre.setText("NOMBRE CUENTA");
+        jLabelNombre.setText("NOMBRE ");
 
-        jTextFieldCantPesos.setBackground(new java.awt.Color(255, 255, 255));
-        jTextFieldCantPesos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
+        jTextFieldAbreviatura.setBackground(new java.awt.Color(248, 253, 249));
+        jTextFieldAbreviatura.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
 
-        jLabelCantInicialPesos.setText("CANTIDAD INICIAL DE PESOS");
+        jLabelAbreviatura.setText("ABREVIATURA");
 
-        jTextFieldCantDolares.setBackground(new java.awt.Color(255, 255, 255));
-        jTextFieldCantDolares.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
+        jTextFieldFactorConversion.setBackground(new java.awt.Color(248, 253, 249));
+        jTextFieldFactorConversion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
 
-        jLabelCantInicialDolares.setText("CANTIDAD INICIAL DE DOLARES");
+        jLabelFactorConversion.setText("FACTOR CONVERSIÓN RESPECTO AL USD");
 
         jButtonAceptar.setBackground(new java.awt.Color(52, 84, 61));
         jButtonAceptar.setForeground(new java.awt.Color(255, 255, 255));
@@ -95,16 +96,16 @@ public class AltaCuenta extends javax.swing.JFrame {
                         .addGap(20, 20, 20)
                         .addComponent(jLabelBack, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(jLabelNuevaCuenta))
+                        .addComponent(jLabelNuevaMoneda))
                     .addGroup(jPanelBGLayout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addGroup(jPanelBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelNombre)
                             .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelCantInicialDolares)
-                            .addComponent(jTextFieldCantDolares, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelCantInicialPesos)
-                            .addComponent(jTextFieldCantPesos, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabelFactorConversion)
+                            .addComponent(jTextFieldFactorConversion, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelAbreviatura)
+                            .addComponent(jTextFieldAbreviatura, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBGLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jButtonAceptar)))
@@ -118,19 +119,19 @@ public class AltaCuenta extends javax.swing.JFrame {
                     .addGroup(jPanelBGLayout.createSequentialGroup()
                         .addGap(5, 5, 5)
                         .addComponent(jLabelBack, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabelNuevaCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelNuevaMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabelNombre)
                 .addGap(4, 4, 4)
                 .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelCantInicialPesos)
+                .addComponent(jLabelAbreviatura)
                 .addGap(4, 4, 4)
-                .addComponent(jTextFieldCantPesos, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldAbreviatura, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelCantInicialDolares)
+                .addComponent(jLabelFactorConversion)
                 .addGap(4, 4, 4)
-                .addComponent(jTextFieldCantDolares, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldFactorConversion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButtonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(24, Short.MAX_VALUE))
@@ -152,29 +153,29 @@ public class AltaCuenta extends javax.swing.JFrame {
 
     private void jLabelBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackMouseClicked
         // TODO add your handling code here:
-        AccountsController accountsController = AccountsController.getInstance();
+        TransactionsController transactionsController = TransactionsController.getInstance();
         
-        accountsController.altaCuentaCerrar();
+        transactionsController.altaMonedaCerrar();
     }//GEN-LAST:event_jLabelBackMouseClicked
 
     private void jButtonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarActionPerformed
         // TODO add your handling code here:
-        AccountsController accountsController = AccountsController.getInstance();
+        TransactionsController transactionsController = TransactionsController.getInstance();
         
-        accountsController.altaCuentaCerrar();
+        transactionsController.altaMonedaCerrar();
     }//GEN-LAST:event_jButtonAceptarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAceptar;
+    private javax.swing.JLabel jLabelAbreviatura;
     private javax.swing.JLabel jLabelBack;
-    private javax.swing.JLabel jLabelCantInicialDolares;
-    private javax.swing.JLabel jLabelCantInicialPesos;
+    private javax.swing.JLabel jLabelFactorConversion;
     private javax.swing.JLabel jLabelNombre;
-    private javax.swing.JLabel jLabelNuevaCuenta;
+    private javax.swing.JLabel jLabelNuevaMoneda;
     private javax.swing.JPanel jPanelBG;
-    private javax.swing.JTextField jTextFieldCantDolares;
-    private javax.swing.JTextField jTextFieldCantPesos;
+    private javax.swing.JTextField jTextFieldAbreviatura;
+    private javax.swing.JTextField jTextFieldFactorConversion;
     private javax.swing.JTextField jTextFieldNombre;
     // End of variables declaration//GEN-END:variables
 }

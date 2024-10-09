@@ -4,6 +4,7 @@
  */
 package com.mycompany.ui;
 
+import com.mycompany.controller.CategoriesController;
 import javax.swing.ImageIcon;
 
 /**
@@ -202,7 +203,9 @@ public class VerCategoria extends javax.swing.JFrame {
 
     private void jLabelBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackMouseClicked
         // TODO add your handling code here:
-        dispose();
+        CategoriesController categoriesController = CategoriesController.getInstance();
+        
+        categoriesController.verCategoriaCerrar();
     }//GEN-LAST:event_jLabelBackMouseClicked
 
 

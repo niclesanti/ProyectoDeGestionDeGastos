@@ -4,6 +4,7 @@
  */
 package com.mycompany.ui;
 
+import com.mycompany.controller.TransactionsController;
 import javax.swing.ImageIcon;
 
 /**
@@ -112,23 +113,25 @@ public class PantallaTransacciones extends javax.swing.JFrame {
 
     private void jLabelBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackMouseClicked
         // TODO add your handling code here:
-        dispose();
+        TransactionsController transactionsController = TransactionsController.getInstance();
+        
+        transactionsController.pantallaTransaccionesCerrar();
     }//GEN-LAST:event_jLabelBackMouseClicked
 
     private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarActionPerformed
         // TODO add your handling code here:
-        BuscarTransacciones buscarTransaccion = new BuscarTransacciones();
-        buscarTransaccion.setVisible(true);
-        buscarTransaccion.setLocationRelativeTo(null);
-        dispose();
+        TransactionsController transactionsController = TransactionsController.getInstance();
+        
+        transactionsController.buscarTransaccionesVisible();
+        transactionsController.pantallaTransaccionesCerrar();
     }//GEN-LAST:event_jButtonBuscarActionPerformed
 
     private void jButtonNuevaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuevaActionPerformed
         // TODO add your handling code here:
-        AltaTransacciones altaTransaccion = new AltaTransacciones();
-        altaTransaccion.setVisible(true);
-        altaTransaccion.setLocationRelativeTo(null);
-        dispose();
+        TransactionsController transactionsController = TransactionsController.getInstance();
+        
+        transactionsController.altaTransaccionesVisible();
+        transactionsController.pantallaTransaccionesCerrar();
     }//GEN-LAST:event_jButtonNuevaActionPerformed
 
 

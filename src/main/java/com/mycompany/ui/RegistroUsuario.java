@@ -4,6 +4,7 @@
  */
 package com.mycompany.ui;
 
+import com.mycompany.controller.LoginController;
 import javax.swing.ImageIcon;
 
 /**
@@ -11,7 +12,7 @@ import javax.swing.ImageIcon;
  * @author nicle
  */
 public class RegistroUsuario extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form RegistroUsuario
      */
@@ -227,7 +228,8 @@ public class RegistroUsuario extends javax.swing.JFrame {
 
     private void jButtonCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarActionPerformed
         // TODO add your handling code here:
-        dispose();
+        LoginController loginController = LoginController.getInstance();
+        loginController.registrarUusarioCerrar();
     }//GEN-LAST:event_jButtonCerrarActionPerformed
 
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
@@ -236,10 +238,9 @@ public class RegistroUsuario extends javax.swing.JFrame {
 
     private void jLabelBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackMouseClicked
         // TODO add your handling code here:
-        Login login = new Login();
-        login.setVisible(true);
-        login.setLocationRelativeTo(null);
-        dispose();
+        LoginController loginController = LoginController.getInstance();
+        loginController.loginVisible();
+        loginController.registrarUusarioCerrar();
     }//GEN-LAST:event_jLabelBackMouseClicked
 
 

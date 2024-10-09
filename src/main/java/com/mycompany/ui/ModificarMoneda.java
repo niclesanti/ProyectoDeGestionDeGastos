@@ -11,12 +11,12 @@ import javax.swing.ImageIcon;
  *
  * @author nicle
  */
-public class AltaDescripcion extends javax.swing.JFrame {
+public class ModificarMoneda extends javax.swing.JFrame {
 
     /**
-     * Creates new form AltaDescripcion
+     * Creates new form ModificarMoneda
      */
-    public AltaDescripcion() {
+    public ModificarMoneda() {
         initComponents();
         this.setIconImage(new ImageIcon(getClass().getResource("/com/mycompany/images/miBilletera.png")).getImage());
     }
@@ -32,19 +32,19 @@ public class AltaDescripcion extends javax.swing.JFrame {
 
         jPanelBG = new javax.swing.JPanel();
         jLabelBack = new javax.swing.JLabel();
-        jLabelNuevaDescripcion = new javax.swing.JLabel();
-        jLabelDescripcion = new javax.swing.JLabel();
-        jTextFieldDescripcion = new javax.swing.JTextField();
+        jLabelModificarMoneda = new javax.swing.JLabel();
+        jLabelMoneda = new javax.swing.JLabel();
+        jTextFieldFactorConversion = new javax.swing.JTextField();
+        jLabelFactorConversion = new javax.swing.JLabel();
         jButtonAceptar = new javax.swing.JButton();
+        jComboBoxMonedas = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Mi Billetera - Nueva descripcion");
+        setTitle("Mi Billetera - Modificar moneda");
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(370, 165));
         setResizable(false);
 
-        jPanelBG.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelBG.setPreferredSize(new java.awt.Dimension(370, 165));
+        jPanelBG.setBackground(new java.awt.Color(248, 253, 249));
 
         jLabelBack.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/images/back.png"))); // NOI18N
@@ -56,13 +56,15 @@ public class AltaDescripcion extends javax.swing.JFrame {
             }
         });
 
-        jLabelNuevaDescripcion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabelNuevaDescripcion.setText("NUEVA DESCRIPCION");
+        jLabelModificarMoneda.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelModificarMoneda.setText("MODIFICAR MONEDA");
 
-        jLabelDescripcion.setText("DESCRIPCION");
+        jLabelMoneda.setText("MONEDA");
 
-        jTextFieldDescripcion.setBackground(new java.awt.Color(255, 255, 255));
-        jTextFieldDescripcion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
+        jTextFieldFactorConversion.setBackground(new java.awt.Color(248, 253, 249));
+        jTextFieldFactorConversion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
+
+        jLabelFactorConversion.setText("FACTOR CONVERSIÓN RESPECTO AL USD");
 
         jButtonAceptar.setBackground(new java.awt.Color(52, 84, 61));
         jButtonAceptar.setForeground(new java.awt.Color(255, 255, 255));
@@ -74,27 +76,38 @@ public class AltaDescripcion extends javax.swing.JFrame {
             }
         });
 
+        jComboBoxMonedas.setBackground(new java.awt.Color(166, 197, 175));
+        jComboBoxMonedas.setEditable(true);
+        jComboBoxMonedas.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBoxMonedas.setForeground(new java.awt.Color(102, 102, 102));
+        jComboBoxMonedas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar moneda" }));
+        jComboBoxMonedas.setToolTipText("Seleccionar moneda");
+        jComboBoxMonedas.setBorder(null);
+        jComboBoxMonedas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jComboBoxMonedas.setName(""); // NOI18N
+
         javax.swing.GroupLayout jPanelBGLayout = new javax.swing.GroupLayout(jPanelBG);
         jPanelBG.setLayout(jPanelBGLayout);
         jPanelBGLayout.setHorizontalGroup(
             jPanelBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelBGLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelBack, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jLabelNuevaDescripcion)
-                .addContainerGap(149, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBGLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButtonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
-            .addGroup(jPanelBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelBGLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(jPanelBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabelDescripcion)
-                        .addComponent(jTextFieldDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addGroup(jPanelBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelBGLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabelBack, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jLabelModificarMoneda))
+                    .addGroup(jPanelBGLayout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addGroup(jPanelBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelMoneda)
+                            .addComponent(jLabelFactorConversion)
+                            .addComponent(jTextFieldFactorConversion, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBoxMonedas, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBGLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButtonAceptar)))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         jPanelBGLayout.setVerticalGroup(
             jPanelBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,32 +117,29 @@ public class AltaDescripcion extends javax.swing.JFrame {
                     .addGroup(jPanelBGLayout.createSequentialGroup()
                         .addGap(5, 5, 5)
                         .addComponent(jLabelBack, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabelNuevaDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                    .addComponent(jLabelModificarMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabelMoneda)
+                .addGap(4, 4, 4)
+                .addComponent(jComboBoxMonedas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelFactorConversion)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldFactorConversion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(78, 78, 78)
                 .addComponent(jButtonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
-            .addGroup(jPanelBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelBGLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelDescripcion)
-                    .addGap(4, 4, 4)
-                    .addComponent(jTextFieldDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanelBG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanelBG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanelBG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanelBG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -138,24 +148,26 @@ public class AltaDescripcion extends javax.swing.JFrame {
     private void jLabelBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackMouseClicked
         // TODO add your handling code here:
         TransactionsController transactionsController = TransactionsController.getInstance();
-        
-        transactionsController.altaDescripcionCerrar();
+
+        transactionsController.modificarMonedaCerrar();
     }//GEN-LAST:event_jLabelBackMouseClicked
 
     private void jButtonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarActionPerformed
         // TODO add your handling code here:
         TransactionsController transactionsController = TransactionsController.getInstance();
-        
-        transactionsController.altaDescripcionCerrar();
+
+        transactionsController.modificarMonedaCerrar();
     }//GEN-LAST:event_jButtonAceptarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAceptar;
+    private javax.swing.JComboBox<String> jComboBoxMonedas;
     private javax.swing.JLabel jLabelBack;
-    private javax.swing.JLabel jLabelDescripcion;
-    private javax.swing.JLabel jLabelNuevaDescripcion;
+    private javax.swing.JLabel jLabelFactorConversion;
+    private javax.swing.JLabel jLabelModificarMoneda;
+    private javax.swing.JLabel jLabelMoneda;
     private javax.swing.JPanel jPanelBG;
-    private javax.swing.JTextField jTextFieldDescripcion;
+    private javax.swing.JTextField jTextFieldFactorConversion;
     // End of variables declaration//GEN-END:variables
 }
