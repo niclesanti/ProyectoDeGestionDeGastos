@@ -8,6 +8,7 @@ import com.mycompany.ui.AltaDescripcion;
 import com.mycompany.ui.AltaMoneda;
 import com.mycompany.ui.AltaTransacciones;
 import com.mycompany.ui.BuscarTransacciones;
+import com.mycompany.ui.ModificarMoneda;
 import com.mycompany.ui.PantallaTransacciones;
 import com.mycompany.ui.SeleccionTransaccion;
 
@@ -25,6 +26,7 @@ public class TransactionsController {
     private final SeleccionTransaccion seleccionTransaccion;
     private final AltaDescripcion nuevaDescripcion;
     private final AltaMoneda nuevaMoneda;
+    private final ModificarMoneda modificarMoneda;
     
     private TransactionsController(){
         this.pantallaTransacciones = new PantallaTransacciones();
@@ -33,6 +35,7 @@ public class TransactionsController {
         this.seleccionTransaccion = new SeleccionTransaccion();
         this.nuevaDescripcion = new AltaDescripcion();
         this.nuevaMoneda = new AltaMoneda();
+        this.modificarMoneda = new ModificarMoneda();
     }
     
     // Método público estático para obtener la instancia única de TransactionsController
@@ -94,5 +97,14 @@ public class TransactionsController {
     
     public void altaMonedaCerrar(){
         this.nuevaMoneda.dispose();
+    }
+    
+    public void modificarMonedaVisible(){
+        this.modificarMoneda.setVisible(true);
+        this.modificarMoneda.setLocationRelativeTo(null);
+    }
+    
+    public void modificarMonedaCerrar(){
+        this.modificarMoneda.dispose();
     }
 }
