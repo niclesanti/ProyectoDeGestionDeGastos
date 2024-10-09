@@ -4,6 +4,7 @@
  */
 package com.mycompany.ui;
 
+import com.mycompany.controller.TransactionsController;
 import javax.swing.ImageIcon;
 
 /**
@@ -326,17 +327,16 @@ public class BuscarTransacciones extends javax.swing.JFrame {
 
     private void jLabelBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackMouseClicked
         // TODO add your handling code here:
-        PantallaTransacciones transaccionesPantalla = new PantallaTransacciones();
-        transaccionesPantalla.setVisible(true);
-        transaccionesPantalla.setLocationRelativeTo(null);
-        dispose();
+        TransactionsController transactionsController = TransactionsController.getInstance();
+        
+        transactionsController.buscarTransaccionesCerrar();
     }//GEN-LAST:event_jLabelBackMouseClicked
 
     private void jButtonVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVerActionPerformed
         // TODO add your handling code here:
-        SeleccionTransaccion seleccionTransaccion = new SeleccionTransaccion();
-        seleccionTransaccion.setVisible(true);
-        seleccionTransaccion.setLocationRelativeTo(null);
+        TransactionsController transactionsController = TransactionsController.getInstance();
+        
+        transactionsController.seleccionTransaccionVisible();
     }//GEN-LAST:event_jButtonVerActionPerformed
 
     private void jButtonRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRemoverActionPerformed

@@ -4,6 +4,7 @@
  */
 package com.mycompany.ui;
 
+import com.mycompany.controller.SubeController;
 import javax.swing.ImageIcon;
 
 /**
@@ -152,15 +153,16 @@ public class AltaSube extends javax.swing.JFrame {
 
     private void jLabelBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackMouseClicked
         // TODO add your handling code here:
-        PantallaSube subePantalla = new PantallaSube();
-        subePantalla.setVisible(true);
-        subePantalla.setLocationRelativeTo(null);
-        dispose();
+        SubeController subeController = SubeController.getInstance();
+        
+        subeController.altaSubeCerrar();
     }//GEN-LAST:event_jLabelBackMouseClicked
 
     private void jButtonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarActionPerformed
         // TODO add your handling code here:
-        dispose();
+        SubeController subeController = SubeController.getInstance();
+        
+        subeController.altaSubeCerrar();
     }//GEN-LAST:event_jButtonAceptarActionPerformed
 
 
