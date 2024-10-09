@@ -234,6 +234,9 @@ public class AltaTransacciones extends javax.swing.JFrame {
 
     private void jButtonNuevaMonedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuevaMonedaActionPerformed
         // TODO add your handling code here:
+        TransactionsController transactionsController = TransactionsController.getInstance();
+        
+        transactionsController.altaMonedaVisible();
     }//GEN-LAST:event_jButtonNuevaMonedaActionPerformed
 
 

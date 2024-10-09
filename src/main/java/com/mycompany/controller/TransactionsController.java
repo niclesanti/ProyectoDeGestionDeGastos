@@ -5,6 +5,7 @@
 package com.mycompany.controller;
 
 import com.mycompany.ui.AltaDescripcion;
+import com.mycompany.ui.AltaMoneda;
 import com.mycompany.ui.AltaTransacciones;
 import com.mycompany.ui.BuscarTransacciones;
 import com.mycompany.ui.PantallaTransacciones;
@@ -23,6 +24,7 @@ public class TransactionsController {
     private final BuscarTransacciones buscarTransacciones;
     private final SeleccionTransaccion seleccionTransaccion;
     private final AltaDescripcion nuevaDescripcion;
+    private final AltaMoneda nuevaMoneda;
     
     private TransactionsController(){
         this.pantallaTransacciones = new PantallaTransacciones();
@@ -30,6 +32,7 @@ public class TransactionsController {
         this.buscarTransacciones = new BuscarTransacciones();
         this.seleccionTransaccion = new SeleccionTransaccion();
         this.nuevaDescripcion = new AltaDescripcion();
+        this.nuevaMoneda = new AltaMoneda();
     }
     
     // Método público estático para obtener la instancia única de TransactionsController
@@ -82,5 +85,14 @@ public class TransactionsController {
     
     public void altaDescripcionCerrar(){
         this.nuevaDescripcion.dispose();
+    }
+    
+    public void altaMonedaVisible(){
+        this.nuevaMoneda.setVisible(true);
+        this.nuevaMoneda.setLocationRelativeTo(null);
+    }
+    
+    public void altaMonedaCerrar(){
+        this.nuevaMoneda.dispose();
     }
 }
